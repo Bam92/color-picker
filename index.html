@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Color Picker by Abel</title>
+</head>
+<style>
+    #displayer {
+        border: 2px solid;
+        width: 10em;
+        height: 10em
+    }
+</style>
+<body>
+    <div id="container">
+        <h1>Color Picker</h1>
+        <div id="picker">
+          <input name="Color Picker" type="color"/>
+        </div>
+         <div id="displayer">
+           
+        </div>
+      </div>
+
+    <script>
+
+        const input = document.querySelector('input');
+        const area = document.getElementById('displayer');
+
+        input.addEventListener('input', () => {
+        area.style.backgroundColor = input.value;
+        })
+
+    </script>
+</body>
+</html>
