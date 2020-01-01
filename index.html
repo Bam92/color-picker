@@ -7,21 +7,44 @@
     <title>Color Picker by Abel</title>
 </head>
 <style>
-    #displayer {
-        border: 2px solid;
-        width: 10em;
-        height: 10em
+
+    #container h1 {
+        text-align: center;
     }
+
+    main {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    #displayer {
+        
+        width: 15em;
+        height: 15em;
+    }
+
+    #picker input {
+        width: 9rem;
+        height: 1em;
+    }
+
 </style>
+
 <body>
     <div id="container">
         <h1>Color Picker</h1>
-        <div id="picker">
-          <input name="Color Picker" type="color"/>
-        </div>
-         <div id="displayer">
-           
-        </div>
+        <main>
+            <div id="picker">
+                <h2>Pick a color</h2>
+                <input name="Color Picker" type="color"/>
+            </div>
+        
+            <div>
+                <h2>Selected Color</h2>      
+                <div id="displayer">                
+            </div>
+            </div>
+        </main>
       </div>
 
     <script>
@@ -31,7 +54,7 @@
 
         input.addEventListener('input', () => {
         area.style.backgroundColor = input.value;
-        })
+        });
 
     </script>
 </body>
