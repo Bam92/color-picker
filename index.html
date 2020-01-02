@@ -8,6 +8,7 @@
 </head>
 <style>
 
+  
     #container h1 {
         text-align: center;
     }
@@ -23,6 +24,28 @@
         height: 15em;
     }
 
+    #displayer div,
+    #color-text {
+        
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+    }
+
+    #displayer p:nth-child(2),
+    #displayer p:nth-child(4) {
+        
+        text-shadow: .9px .9px;
+    }
+
+    #displayer p:nth-child(3),
+    #displayer p:nth-child(4) {
+        
+        color: white;
+    }
+
+      
     #picker input {
         width: 9rem;
         height: 1em;
@@ -41,8 +64,19 @@
         
             <div>
                 <h2>Selected Color</h2>      
-                <div id="displayer">                
-            </div>
+                <div id="displayer">    
+                    <div>
+                        <p>Black Text</p>            
+                        <p>Shadow</p>            
+                        <p>White Text</p>            
+                        <p>Shadow</p> 
+                    </div>           
+                </div>
+                <div id="color-text">
+                    <p id="hex"></p>
+                    <p id="rgb"></p>
+                    <p id="hsl"></p>
+                </div>
             </div>
         </main>
       </div>
@@ -53,7 +87,10 @@
         const area = document.getElementById('displayer');
 
         input.addEventListener('input', () => {
-        area.style.backgroundColor = input.value;
+            let currColor = input.value;
+
+            area.style.backgroundColor = currColor;
+            document.getElementById('hex').innerHTML = currColor;
         });
 
     </script>
