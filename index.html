@@ -5,53 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Color Picker by Abel</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<style>
-
-  
-    #container h1 {
-        text-align: center;
-    }
-
-    main {
-        display: flex;
-        justify-content: space-around;
-    }
-    
-    #displayer {
-        
-        width: 15em;
-        height: 15em;
-    }
-
-    #displayer div,
-    #color-text {
-        
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       flex-direction: column;
-    }
-
-    #displayer p:nth-child(2),
-    #displayer p:nth-child(4) {
-        
-        text-shadow: .9px .9px;
-    }
-
-    #displayer p:nth-child(3),
-    #displayer p:nth-child(4) {
-        
-        color: white;
-    }
-
-      
-    #picker input {
-        width: 9rem;
-        height: 1em;
-    }
-
-</style>
 
 <body>
     <div id="container">
@@ -81,18 +37,6 @@
         </main>
       </div>
 
-    <script>
-
-        const input = document.querySelector('input');
-        const area = document.getElementById('displayer');
-
-        input.addEventListener('input', () => {
-            let currColor = input.value;
-
-            area.style.backgroundColor = currColor;
-            document.getElementById('hex').innerHTML = currColor;
-        });
-
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>

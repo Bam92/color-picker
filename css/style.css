@@ -1,0 +1,41 @@
+#container h1 {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
+#displayer {
+    
+    width: 15em;
+    height: 15em;
+}
+
+#displayer div,
+#color-text {
+    
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+#displayer p:nth-child(2),
+#displayer p:nth-child(4) {
+    
+    text-shadow: .9px .9px;
+}
+
+#displayer p:nth-child(3),
+#displayer p:nth-child(4) {
+    
+    color: white;
+}
+
+  
+#picker input {
+    width: 9rem;
+    height: 1em;
+}
